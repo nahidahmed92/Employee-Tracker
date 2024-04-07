@@ -19,4 +19,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // ROUTE =============================================
+
 // INITIALIZATION ====================================
+app.listen(port, () => {
+  console.log(`Server listening on port ${port}`);
+});
