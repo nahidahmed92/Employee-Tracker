@@ -3,9 +3,6 @@ const express = require('express');
 const { Pool } = require('pg');
 
 // DATA ==============================================
-
-// APP/PORT ==========================================
-const app = express();
 const pool = new Pool({
   user: 'postgres',
   password: 'columbiadev',
@@ -13,6 +10,13 @@ const pool = new Pool({
   database: 'employeeManager_db',
 });
 
+// APP/PORT ==========================================
+const app = express();
+const port = process.env.PORT || 3001;
+
 // MIDDLEWARE ========================================
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
 // ROUTE =============================================
 // INITIALIZATION ====================================
