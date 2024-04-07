@@ -7,7 +7,7 @@ const pool = new Pool({
   user: 'postgres',
   password: 'columbiadev',
   host: 'localhost',
-  database: 'employeeManager_db',
+  database: 'employee_manager_db',
 });
 
 // APP/PORT ==========================================
@@ -24,3 +24,5 @@ app.use(express.urlencoded({ extended: true }));
 app.listen(port, () => {
   console.log(`Server listening on port ${port}`);
 });
+
+module.exports = { app, pool };
