@@ -18,6 +18,3 @@ Y88888P YP  YP  YP 88      Y88888P  \`Y88P'     YP    Y88888P Y88888P
 `);
 
 module.exports = { employeeManagerLogo };
-
-const { employeeManagerLogo } = require('./assets/asciiArt.js');
-employeeManagerLogo;
